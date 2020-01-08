@@ -1,0 +1,14 @@
+# install in local system for operating aws in localsys
+
+prerequisites
+--------------
+yum insatll python -y
+
+Steps to install pip:
+    Method-1: easy_install pip
+    Method-2: 
+             step1:   curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+             step2: python get-pip.py    
+Note: Just perform this action with root account or with sudo
+
+-------------------------------------------------------------------------------------
