@@ -1,0 +1,30 @@
+# list aws IAM users in localhost by using python boto3 scripts 
+----------------------------------------------------------------
+
+#!/bin/python
+import boto3
+aws_mag_con=boto3.session.Session()
+iam_con=aws_mag_con.resource('iam')
+
+for each_user in iam_con.users.all():
+    print(each_user.name)
+
+----------------------------------------------------------------
+
+# start the particular ec2 instance we defined 
+
+#!/bin/python
+
+import boto3
+
+import time
+session=boto3.session.Session()
+ec2_resource=session.resource(service_name="ec2",region_name="ap-south-1")
+my_in=ec2_resource.Instance(id="i-06bad73b29abc567f")
+my_in.start()
+my_in.wait_until_running()
+
+-----------------------------------------------------------------
+
+
+
